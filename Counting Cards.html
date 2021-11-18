@@ -4,34 +4,111 @@
     <meta charset="UTF-8">
     <title>Counting Cards</title>
 </head>
-<body>
+<body   bgcolor="#2b2b2b">
+<div class="out"  ></div>
+<div>
+    <button>Push</button>
+    <div class="out2"></div>
+</div>
 <script>
 
-    let count = 0;
-    console.log('before  ' + count );
-
-    let cards = [1,2,3];
-    /* const cards = [[2,3,4,5,6],[7,8,9],[10,'J','Q','K','A']];*/
+    let out = '';
 
 
-    function cc(card) {
-        // Only change code below this line
-        let num = card;
-        return num;
-       /* let num = cards[1];
-        if (card){
-            return count + 1;
+    let b = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ];
+    //console.log(b);
+
+
+    for (let i = 0; i < b.length; i ++){
+        for (let k = 0; k < b[i].length; k++){
+           // console.log(    b[i][k]   );
+            out += b[i][k] + ' ';
         }
-        return 0;*/
-        // Only change code above this line
+        out += '<br>';
+    }
+    out = '';
+    for (let i = 0; i < b.length; i ++){
+        for (let k = 0; k < b[i].length; k++){
+          //  console.log(    b[i][k]   );
+            if(b[i][k] > 4){
+                out += b[i][k] + ' ';
+            }
+
+
+        }
+        out += '<br>';
+    }
+
+    console.log(out);
+
+    document.querySelector('.out').innerHTML = out;
+
+    let d = ['=)', 0, 0, 0, 0,];
+    document.querySelector('.out2').innerHTML = d;
+    let k = 0;
+    document.querySelector('button').onclick = () => {
+        if (k + 1 < 100) {
+            d[k] = 0;
+            d[k + 1] = '=)';
+            k++;
+        }
+        document.querySelector('.out2').innerHTML = d;
     }
 
 
-    console.log('after  ' + count );
-    console.log('');
-    /*--------------*/
-    console.log(cc(2) + '  receive parameters');
-   /* cc(2); cc(3); cc(7); cc('K'); cc('A');*/
+
+
+
+    /*----------------------------------------------------------------------------------*/
+        /*for (let i = 0; i < b.length; i++) {
+
+            let c = b[i];
+            for (let k = c.length - 1; k >= 0; k--) {
+
+                console.log(c[k]);
+            }
+            console.log(' ');
+        }*/
+
+    /*----------------------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------------------*/
+        /*let count = 0;
+        const cards = [[2, 3, 4, 5, 6], [7, 8, 9], [10, 'J', 'Q', 'K', 'A']];
+
+
+        function cc(card) {
+            // Only change code below this line
+
+            for (let i = 0; i < cards.length; i++) {
+                for (let j = 0; j < cards.length; j++) {
+                    if (card == [i][j]) {
+                        count++;
+                    } else count--;
+                }
+            }
+        }
+
+        // Only change code above this line
+
+
+        cc(10);
+        cc('J');
+        cc('Q');
+        cc('K');
+        cc('A');
+
+        if (count <= 0) {
+            console.log('count = ' + count + '  Bet')
+        } else {
+            console.log('count = ' + count + '  Hold')
+        }
+        console.log((cards));*/
+
+    /*----------------------------------------------------------------------------------*/
 
 
 </script>
