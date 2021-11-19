@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Accessing Nested Arrays</title>
 </head>
 <body>
-$END$
+<script>
+
+    const myPlants = [
+        {
+            type: "flowers",
+            list: [
+                "rose",
+                "tulip",
+                "dandelion"
+            ]
+        },
+        {
+            type: "trees",
+            list: [
+                "fir",
+                "pine",
+                "birch"
+            ]
+        }
+    ];
+
+    const secondTree = myPlants[1].list[1];
+    const secondTree = myPlants[1].list[1];
+
+</script>
 </body>
 </html>
