@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing Objects for Properties</title>
+</head>
+<body>
+<script>
+
+
+    const obj = {
+        gift: "pony",
+        pet: "kitten",
+        bed: "sleigh",
+        city: "Seattle"
+    };
+
+
+    function checkObj(obj, checkProp) {
+        // Only change code below this line
+
+        if (obj.hasOwnProperty(checkProp)) {
+            console.log(obj[checkProp]);
+            return checkProp;
+        } else
+            return "Not Found";
+        // Only change code above this line
+    }
+
+    checkObj(obj, "city");
+
+</script>
+</body>
+</html>
