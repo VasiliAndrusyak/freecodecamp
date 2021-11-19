@@ -4,112 +4,136 @@
     <meta charset="UTF-8">
     <title>Counting Cards</title>
 </head>
-<body   bgcolor="#2b2b2b">
-<div class="out"  ></div>
+<body bgcolor="#2b2b2b">
+<div class="out"></div>
 <div>
     <button>Push</button>
     <div class="out2"></div>
 </div>
 <script>
 
-    let out = '';
+    /* let out = '';
+     let b = [
+         [1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9],
+     ];
+     //console.log(b);
+
+     for (let i = 0; i < b.length; i++) {
+         for (let k = 0; k < b[i].length; k++) {
+             // console.log(    b[i][k]   );
+             out += b[i][k] + ' ';
+         }
+         out += '<br>';
+     }
+     out = '';
+     for (let i = 0; i < b.length; i++) {
+         for (let k = 0; k < b[i].length; k++) {
+             //  console.log(    b[i][k]   );
+             if (b[i][k] > 4) {
+                 out += b[i][k] + ' ';
+             }
 
 
-    let b = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9],
-    ];
-    //console.log(b);
+         }
+         out += '<br>';
+     }
 
+     console.log(out);
 
-    for (let i = 0; i < b.length; i ++){
-        for (let k = 0; k < b[i].length; k++){
-           // console.log(    b[i][k]   );
-            out += b[i][k] + ' ';
-        }
-        out += '<br>';
-    }
-    out = '';
-    for (let i = 0; i < b.length; i ++){
-        for (let k = 0; k < b[i].length; k++){
-          //  console.log(    b[i][k]   );
-            if(b[i][k] > 4){
-                out += b[i][k] + ' ';
-            }
+     document.querySelector('.out').innerHTML = out;
 
+     let d = ['=)', 0, 0, 0, 0,];
+     document.querySelector('.out2').innerHTML = d;
+     let k = 0;
+     document.querySelector('button').onclick = () => {
+         if (k + 1 < 100) {
+             d[k] = 0;
+             d[k + 1] = '=)';
+             k++;
+         }
+         document.querySelector('.out2').innerHTML = d;
+     }
 
-        }
-        out += '<br>';
-    }
-
-    console.log(out);
-
-    document.querySelector('.out').innerHTML = out;
-
-    let d = ['=)', 0, 0, 0, 0,];
-    document.querySelector('.out2').innerHTML = d;
-    let k = 0;
-    document.querySelector('button').onclick = () => {
-        if (k + 1 < 100) {
-            d[k] = 0;
-            d[k + 1] = '=)';
-            k++;
-        }
-        document.querySelector('.out2').innerHTML = d;
-    }
-
-
-
-
-
+ */
     /*----------------------------------------------------------------------------------*/
-        /*for (let i = 0; i < b.length; i++) {
+    /*for (let i = 0; i < b.length; i++) {
 
-            let c = b[i];
-            for (let k = c.length - 1; k >= 0; k--) {
+        let c = b[i];
+        for (let k = c.length - 1; k >= 0; k--) {
 
-                console.log(c[k]);
-            }
-            console.log(' ');
-        }*/
-
-    /*----------------------------------------------------------------------------------*/
-    /*----------------------------------------------------------------------------------*/
-        /*let count = 0;
-        const cards = [[2, 3, 4, 5, 6], [7, 8, 9], [10, 'J', 'Q', 'K', 'A']];
-
-
-        function cc(card) {
-            // Only change code below this line
-
-            for (let i = 0; i < cards.length; i++) {
-                for (let j = 0; j < cards.length; j++) {
-                    if (card == [i][j]) {
-                        count++;
-                    } else count--;
-                }
-            }
+            console.log(c[k]);
         }
+        console.log(' ');
+    }*/
 
-        // Only change code above this line
+    /*const cards = [[2, 3, 4, 5, 6], [7, 8, 9], [10, 'J', 'Q', 'K', 'A']];*/
+    /*for (let i = 0; i < cards.length; i++) {
+               for (let j = 0; j < cards[i].length; j++) {
 
+                   if ( card == cards[i][j] ) {
+                       count++;
+                       console.log(cards[i][j] + '  ' + count);
+                   }
+                   /!*else  if ( cards[i][j] == 10  || cards[i][j] < 'J'
+                       || cards[i][j] < 'Q'
+                       || cards[i][j] < 'K'
+                       || cards[i][j] < 'A' ) {
+                       count--;
+                   }*!/
+               }
+           }*/
+    /*----------------------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------------------*/
 
-        cc(10);
-        cc('J');
-        cc('Q');
-        cc('K');
-        cc('A');
+    let count = 0;
 
-        if (count <= 0) {
-            console.log('count = ' + count + '  Bet')
+    function cc(card) {
+        // Only change code below this line
+
+        if (card == 2 || card == 3 || card == 4 || card == 5 || card == 6) {
+            count++;
+        } else if (card == 10 || card == 'J' || card == 'Q' || card == 'K' || card == 'A') {
+            count--;
+        }
+        if (count >= 1) {
+            return (count + ' Bet');
         } else {
-            console.log('count = ' + count + '  Hold')
+            return (count + ' Hold');
         }
-        console.log((cards));*/
+    }
+
+    cc(3);
+    cc(2);
+    cc('A');
+    cc(10);
+    cc('K');
+
+    if (count >= 1) {
+        console.log(count + '  Bet')
+    } else {
+        console.log(count + '  Hold')
+    }
+
+    // Only change code above this line
+
+    /* console.log((cards));*/
 
     /*----------------------------------------------------------------------------------*/
+    /* Cards Sequence 2, 3, 4, 5, 6 should return 5 Bet
 
+     Cards Sequence 7, 8, 9 should return the string 0 Hold
+
+     Cards Sequence 10, J, Q, K, A should return the string -5 Hold
+
+     Cards Sequence 3, 7, Q, 8, A should return the string -1 Hold
+
+     Cards Sequence 2, J, 9, 2, 7 should return the string 1 Bet
+
+     Cards Sequence 2, 2, 10 should return the string 1 Bet
+
+     Cards Sequence 3, 2, A, 10, K should return the string -1 Hold*/
 
 </script>
 </body>
