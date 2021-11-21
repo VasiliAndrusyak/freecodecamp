@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>_test</title>
+</head>
+<body bgcolor="#151e1b">
+<script>
+
+    function showMoreMessage() {
+        console.log('More then  3');
+    }
+
+    function showLessMessage() {
+        console.log('Less then  3');
+    }
+
+    function calcSum(numOne, numTwo, more, less) {
+        let numSum = numOne + numTwo;
+
+        if (numSum > 3) {
+            more();
+        } else {
+            less();
+        }
+    }
+
+    calcSum(1, 5, showMoreMessage, showLessMessage);
+
+
+</script>
+</body>
+</html>
+<!--
+Ваша функция всегда должна возвращать весь объект коллекции записей.
+Если prop не является треками, а значение не является пустой строкой, обновите или установите значение prop для этого альбома.
+Если prop - это треки, но у альбома нет свойства tracks, создайте пустой массив и добавьте к нему значение.
+Если prop - это треки, а значение не является пустой строкой, добавьте значение в конец существующего массива треков альбома.
+Если значение является пустой строкой, удалите данное свойство prop из альбома.-->
