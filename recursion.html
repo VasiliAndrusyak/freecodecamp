@@ -7,39 +7,18 @@
 <body>
 <script>
 
+    let a = 0;
 
-    /*let t = 0;
-    function f1() {
-        t++;
-        console.log(t);
-        if(t === 100) return;
-        f1();
-    }*/
-
-    //цикл
-    function f2() {
-        let out = '';
-        for (let i = 0; i <= 30; i++) {
-            out += i + ' ';
+    function rec() {
+        a += 5;
+        console.log(a);
+        if(a > 99){
+            return a;
         }
-        console.log(out);
+        rec();
     }
+    rec();
 
-    f2();
-
-    // рекурсия
-    let i = 0;
-    let out = '';
-
-    function f3() {
-        i++;
-        out += i + ' ';
-        if (i >= 30) return;
-        f3();
-    }
-
-    f3();
-    console.log(out);
 
 
 
