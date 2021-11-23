@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Replace Loops using Recursion</title>
+</head>
+<body bgcolor="#2b2b2b">
+<script>
+
+/*    let arr = [1, 2, 3, 4, 5];
+    let product = 0;
+    function multiply(arr, n) {
+
+        for (let i = 0; i < n; i++) {
+            product += arr[i];
+        }
+         return product;
+
+    }
+    multiply(arr,arr.length);
+    console.log(product);*/
+
+   let arr = [1, 2, 3, 4, 5];
+   function multiply(arr, n) {
+       if (n <= 0) {
+           return 0;
+       } else {
+           return multiply(arr, n - 1) + arr[n - 1];
+       }
+   }
+   console.log(multiply(arr,arr.length));
+
+   /*let arr = [1, 2, 3, 4, 5];
+
+   function sum(arr, n) {
+       // Only change code below this line
+       if ( n <= 0){
+           return 1;
+       }else {
+            console.log(sum(arr, n - 1) + arr[n - 1]);
+       }
+
+       // Only change code above this line
+   }
+   sum(arr,arr.length);*/
+
+
+  /*   Рекурсия - это концепция, согласно которой функция может быть выражена в терминах самой себя.
+       Чтобы понять это, подумайте о следующей задаче: умножьте первые n элементов массива,
+       чтобы создать произведение этих элементов. Используя цикл for, вы можете сделать это:
+
+    function multiply(arr, n) {
+        let product = 1;
+        for (let i = 0; i < n; i++) {
+          product *= arr[i];
+        }
+        return product;
+      }
+   }
+   Однако обратите внимание, что multiply (arr, n) == multiply (arr, n - 1) * arr [n - 1].
+   Это означает, что вы можете переписать умножение с точки зрения самого себя и никогда не использовать цикл.
+
+       function multiply(arr, n) {
+            if (n <= 0) {
+            return 1;
+                  } else {
+             return multiply(arr, n - 1) * arr[n - 1];
+               }
+            }
+
+            [1,2,3,4,5] 5
+
+
+   Рекурсивная версия умножения ломается вот так. В базовом случае, когда n <= 0, он возвращает 1.
+   Для больших значений n он вызывает сам себя, но с n - 1.
+   Этот вызов функции оценивается таким же образом, снова вызывая умножение до тех пор, пока n <= 0.
+   На этом этапе все функции могут возвращаться, и исходное умножение возвращает ответ.
+
+       Примечание. Рекурсивные функции должны иметь базовый случай,
+       когда они возвращаются без повторного вызова функции (в этом примере, когда n <= 0),
+   в противном случае они никогда не смогут завершить выполнение.
+
+       Напишите рекурсивную функцию sum (arr, n), которая возвращает сумму первых n элементов массива arr.*/
+
+</script>
+</body>
+</html>

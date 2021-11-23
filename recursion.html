@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>recursion</title>
+</head>
+<body>
+<script>
+
+
+    /*let t = 0;
+    function f1() {
+        t++;
+        console.log(t);
+        if(t === 100) return;
+        f1();
+    }*/
+
+    //цикл
+    function f2() {
+        let out = '';
+        for (let i = 0; i <= 30; i++) {
+            out += i + ' ';
+        }
+        console.log(out);
+    }
+
+    f2();
+
+    // рекурсия
+    let i = 0;
+    let out = '';
+
+    function f3() {
+        i++;
+        out += i + ' ';
+        if (i >= 30) return;
+        f3();
+    }
+
+    f3();
+    console.log(out);
+
+
+
+</script>
+</body>
+</html>

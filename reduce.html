@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reduce</title>
+</head>
+<body>
+<script>
+
+    let a = [1, 2, 3, 4];
+    let sum = 0;
+    for (let i = 0; i < a.length; i++) {
+        sum += a[i];
+    }
+    console.log(sum);
+    // prev - вычисляемое значение
+    // prev (на старте ) = a[0] если не укажем сами!!!!
+    // вторым параметром можно указать чему равен prev
+    // если это вычисляемое значение нужно писать return
+    // item - текущий элемент масива
+
+    /*let b = a.reduce(function (prev, item, index) {
+        return prev + item;
+    }, 0)*/
+
+    let b = a.reduce((prev, item, index) =>  {
+        return prev + item;
+    }, 0)
+    console.log(b);
+</script>
+</body>
+</html>
