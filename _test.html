@@ -7,25 +7,63 @@
 <body bgcolor="#151e1b">
 <script>
 
-    function showMoreMessage() {
-        console.log('More then  3');
+
+ /*   let Team = [
+        {Name: "Maria", Eyes: "Green", Age: 24,},
+        {Name: "Steve", Eyes: "Green", Age: 20,},
+        {Name: "Helena", Eyes: "Green", Age: 28,}
+    ];*/
+
+   /* let Maria = {Eyes: "Green", Age: 24, Weekends:[2,4,6,12]};
+    let Steve = {Eyes: "Blue", Age: 20, Weekends:[1,4,8,18]};
+    let Helena = {Eyes: "Black", Age: 28, Weekends:[3,7,10,30]};
+
+    let Friends = [Maria, Steve, Helena];
+
+    console.log(Friends);*/
+
+ /*
+        let x = {};
+        x['Age'] = 24;
+        x['Eyes'] = 'Green';
+        x['FavouriteDrink'] = 'Tea';
+    */
+
+
+    let Books = {
+        'Garry Potter part one': {
+            Pages: 400,
+            Author: 'Joanne Rowling',
+            Format: 'Hard cover',
+        },
+        'Garry Potter part two': {
+            Pages: 450,
+            Author: 'Joanne Rowling',
+            Format: 'Soft cover',
+        },
+        'Garry Potter part tree': {
+            Pages: 470,
+            Author: 'Joanne Rowling',
+            Format: 'Hard-soft cover',
+        },
     }
 
-    function showLessMessage() {
-        console.log('Less then  3');
-    }
+    let BooksPotter = Books['Garry Potter part one'];
+    let twilight = {
+        Pages: 700,
+        Author: 'Stephanie meyer',
+        Format: 'Soft cover',
+    };
 
-    function calcSum(numOne, numTwo, more, less) {
-        let numSum = numOne + numTwo;
+    Books['Twilight part one'] = twilight;
 
-        if (numSum > 3) {
-            more();
-        } else {
-            less();
-        }
-    }
+    console.log(Object.keys(Books));
 
-    calcSum(1, 5, showMoreMessage, showLessMessage);
+
+
+
+
+
 
 
 </script>
