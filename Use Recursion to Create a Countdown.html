@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use Recursion to Create a Countdown</title>
+</head>
+<body>
+<script>
+
+    // Only change code below this line
+    function countdown(n){
+        if (n < 1) {
+            return [];
+        } else {
+            const countArray = countdown( n - 1 );
+            countArray.unshift(n);
+            return countArray;
+        }
+    }
+    // Only change code above this line
+
+    console.log(countdown(10));
+    console.log(countdown(5));
+    console.log(countdown(-1));
+
+
+</script>
+</body>
+</html>
