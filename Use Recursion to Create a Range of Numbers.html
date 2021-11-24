@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use Recursion to Create a Range of Numbers</title>
+</head>
+<body>
+<script>
+
+    function rangeOfNumbers(startNum,endNum) {
+
+        if (endNum - startNum === 0 ) {
+            return [startNum];
+        } else {
+
+            let countArray =  rangeOfNumbers(startNum, endNum -1);
+            countArray.push(endNum);
+            return countArray;
+        }
+    };
+
+    console.log(rangeOfNumbers(6,9));
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
