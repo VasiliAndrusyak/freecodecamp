@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use Destructuring Assignment to Assign Variables from Objects</title>
+</head>
+<body>
+<script>
+
+    const HIGH_TEMPERATURES = {
+        yesterday: 75,
+        today: 77,
+        tomorrow: 80
+    };
+
+    // Only change code below this line
+
+    /*const highToday = HIGH_TEMPERATURES.today;
+    const highTomorrow = HIGH_TEMPERATURES.tomorrow;*/
+
+    const {today:highToday ,tomorrow:highTomorrow} = HIGH_TEMPERATURES;
+    console.log(highToday);
+    console.log(highTomorrow);
+
+    // Only change code above this line
+
+</script>
+</body>
+</html>
