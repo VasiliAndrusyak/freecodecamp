@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use Destructuring Assignment to Extract Values from Objects</title>
+</head>
+<body>
+<script>
+
+
+    const HIGH_TEMPERATURES = {
+        yesterday: 75,
+        today: 77,
+        tomorrow: 80
+    };
+
+    // Only change code below this line
+/*
+    const today = HIGH_TEMPERATURES.today;
+    const tomorrow = HIGH_TEMPERATURES.tomorrow;*/
+
+    const {today,tomorrow} = HIGH_TEMPERATURES;
+
+    // Only change code above this line
+
+    console.log(today);
+    console.log(tomorrow);
+
+
+</script>
+</body>
+</html>
