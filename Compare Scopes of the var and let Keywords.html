@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compare Scopes of the var and let Keywords</title>
+</head>
+<body bgcolor="#2b2b2b">
+<script>
+
+
+    function checkScope() {
+
+        let i = 'function scope';
+
+        if (true) {
+            let i = 'block scope';
+            console.log('Block scope i is: ', i);
+        }
+
+        console.log('Function scope i is: ', i);
+        return i;
+    }
+
+    checkScope();
+
+
+</script>
+</body>
+</html>
